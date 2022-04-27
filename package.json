@@ -46,6 +46,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
+    "jest": "^28.0.2",
     "postcss": "^8.4.12",
     "prettier": "^2.6.1",
     "react-test-renderer": "^18.0.0",
