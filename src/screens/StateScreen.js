@@ -1,7 +1,11 @@
 import React from 'react';
 
 const StateScreen = () => {
-  return <div></div>;
+  return (
+    <div>
+      <h1>StateScreen</h1>
+    </div>
+  );
 };
 
 export default StateScreen;

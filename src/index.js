@@ -14,5 +14,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-// import {createRoot} from 'react-dom/client'
