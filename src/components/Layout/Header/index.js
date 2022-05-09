@@ -30,7 +30,7 @@ export default function Header() {
           </div>
         </ul>
       </div>
-      <div>
+      <div className="flex w-full justify-around items-center h-12 bg-secondary text-white">
         <Button action={() => navigate('/infos')} text={'Mes infos'} />
         <Button action={(e) => logout(e)} text={'Déconnexion'} />
       </div>
