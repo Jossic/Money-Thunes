@@ -15,7 +15,7 @@ export default function Header() {
       <div className="container logo">
         <img />
       </div>
-      <div>
+      <div className="justify-around items-center text-secondary">
         <Title title={'MONEY - THUNES'} />
         <ul className="container titre/sous titre">
           <li>
