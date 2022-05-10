@@ -1,12 +1,9 @@
 import React from 'react';
 import Button from '../../UX/Button';
 import Title from '../../UX/Title';
-import { useNavigate } from 'react-router-dom';
+import { BrowserRouter as navigate, Link } from 'react-router-dom';
 
 export default function Header() {
-  //ici pour la logique code
-  const navigate = useNavigate();
-
   //fonction de deconnexion
   function logout(e) {
     e.preventDefault();
@@ -21,12 +18,22 @@ export default function Header() {
       <div>
         <Title title={'MONEY - THUNES'} />
         <ul className="container titre/sous titre">
-          <li>Accueil</li>
-          <li>Comptes</li>
+          <li>
+            <Link to="/">Accueil</Link>
+          </li>
+          <li>
+            <Link to="/account">Comptes</Link>
+          </li>
           <div className="burger menu">
-            <li>Échéances</li>
-            <li>État</li>
-            <li>Budget</li>
+            <li>
+              <Link to="/dealines">Échéances</Link>
+            </li>
+            <li>
+              <Link to="/state">État</Link>
+            </li>
+            {/* <li>
+              <Link to="/">Budget</Link>
+            </li> */}
           </div>
         </ul>
       </div>
