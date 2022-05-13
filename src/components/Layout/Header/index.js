@@ -15,13 +15,13 @@ export default function Header() {
   const navigate = useNavigate();
 
   return (
-    <header className="flex flex-col bg-primary">
+    <header className="flex flex-col bg-primary md:flex-row md:h-44 md:justify-between">
       <div className="w-40 self-center mb-4">
         <img src={Logo} alt="logo de moneythunes" />
       </div>
       <div className="flex flex-col justify-around items-center h-40">
         <Title title={'MONEY - THUNES'} />
-        <ul className="flex flex-row w-full justify-around text-secondaryBlue font-semibold">
+        <ul className="flex flex-row w-full justify-around text-secondaryBlue font-semibold ">
           <li>
             <ToLink url={'/'} text={'Accueil'}></ToLink>
           </li>
@@ -41,10 +41,16 @@ export default function Header() {
           </div>
         </ul>
       </div>
-      <div className="flex w-full justify-around items-center h-12 bg-secondary text-white">
-        <Button action={() => navigate('/infos')} text={'Mes infos'} />
+      <div className="flex w-full justify-around items-center h-12 bg-secondary text-white md:w-1/4 md:h-full ">
+        <Button
+          action={() => navigate('/infos')}
+          text={'Mes infos'}
+          classname={'md:h-2 md:border-solid md:border-r-2 md:border-white'}
+        />
         <Button action={(e) => logout(e)} text={'Déconnexion'} />
       </div>
     </header>
   );
 }
+
+// md:h-2 md:border-solid md:border-r-2 md:border-white
