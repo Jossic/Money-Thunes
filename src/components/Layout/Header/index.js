@@ -1,7 +1,9 @@
 import React from 'react';
 import Button from '../../UX/Button';
 import Title from '../../UX/Title';
-import { BrowserRouter as navigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Logo from '../../../asset/Logo_moneYthunes.png';
+import ToLink from '../../UX/Link';
 
 export default function Header() {
   //fonction de deconnexion
@@ -10,30 +12,32 @@ export default function Header() {
     console.log('fonctionnalitée a faire plus tard');
   }
 
+  const navigate = useNavigate();
+
   return (
-    <header>
-      <div className="container logo">
-        <img />
+    <header className="flex flex-col bg-primary">
+      <div className="w-40 self-center mb-4">
+        <img src={Logo} alt="logo de moneythunes" />
       </div>
-      <div className="justify-around items-center text-secondary">
+      <div className="flex flex-col justify-around items-center h-40">
         <Title title={'MONEY - THUNES'} />
-        <ul className="container titre/sous titre">
+        <ul className="flex flex-row w-full justify-around text-secondaryBlue font-semibold">
           <li>
-            <Link to="/">Accueil</Link>
+            <ToLink url={'/'} text={'Accueil'}></ToLink>
           </li>
           <li>
-            <Link to="/account">Comptes</Link>
+            <ToLink url={'/account'} text={'Compte'}></ToLink>
           </li>
           <div className="burger menu">
             <li>
-              <Link to="/dealines">Échéances</Link>
+              <ToLink url={'/dealines'} text={'Échéances'}></ToLink>
             </li>
             <li>
-              <Link to="/state">État</Link>
+              <ToLink url={'/state'} text={'État'}></ToLink>
             </li>
-            {/* <li>
-              <Link to="/">Budget</Link>
-            </li> */}
+            <li>
+              <ToLink url={'/budget'} text={'Budget'}></ToLink>
+            </li>
           </div>
         </ul>
       </div>
