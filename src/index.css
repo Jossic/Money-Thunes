@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/*--- SnackBar ---*/
+
+.alert-info {
+  @apply text-blue-100 bg-blue-500;
+}
+.alert-warning {
+  @apply text-red-100 bg-red-500;
+}
+
+.alert-warning {
+  @apply text-red-100 bg-red-500;
+}
+
+.alert-success {
+  @apply text-green-100 bg-green-500;
+}
+
+.snackbar {
+  animation: apparition 6s ease-in-out;
+  opacity: 0;
+  transition: 2s;
+}
+
+@keyframes apparition {
+  0% {
+    transform: translateY(100%);
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* --- Header --- */
+
+.nav {
+  position: fixed;
+  right: -100%;
+  background: #dfd0d066;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  width: 40%;
+  height: 95vh;
+  transition: 0.1s;
+}
+
+.nav.active {
+  right: 0;
+  transition: 0.4s;
+}
+
+.defaultButton {
+  @apply h-10 w-32 rounded-xl text-white;
+  background-color: #1374cd;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.defaultInput {
+  @apply w-3/5;
+  background-color: transparent;
+  border: 0px solid white;
+  border-bottom: 2px gray solid;
+  padding-left: 5px;
+}
+
+.errorHelperText {
+  @apply text-red-600;
+  font-size: 0.68rem;
+  margin-top: -15px;
+}
+
+/*--- lateralLink*/
+
+.lateralLink {
+  @apply text-blue-700 hover:font-bold cursor-pointer;
+}
+
+/*--- other button form*/
+
+.entryAddButton {
+  @apply h-10 w-16 rounded-xl text-white;
+  background-color: #1374cd;
+}
